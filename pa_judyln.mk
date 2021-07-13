@@ -29,15 +29,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from judyln device
 $(call inherit-product, device/lge/judyln/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common aospa stuff.
+$(call inherit-product, vendor/pa/config/common_full_phone.mk)
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Device identifiers
 
-PRODUCT_NAME := dot_judyln
+PRODUCT_NAME := pa_judyln
 PRODUCT_DEVICE := judyln
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := LGE
@@ -52,6 +52,3 @@ TARGET_VENDOR_DEVICE_NAME := judyln
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=judyln \
     PRODUCT_NAME=judyln_lao_com \
-
-# DotOs
-TARGET_BOOT_ANIMATION_RES := 1440
